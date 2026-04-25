@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="720" height="200">
+  <defs>
+    <linearGradient id="w1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97757"/>
+      <stop offset="100%" stop-color="#B847FF"/>
+    </linearGradient>
+    <linearGradient id="w2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B847FF"/>
+      <stop offset="100%" stop-color="#7C2DFF"/>
+    </linearGradient>
+    <linearGradient id="w3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A1B7F"/>
+      <stop offset="100%" stop-color="#2D1B4E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- icon -->
+  <g transform="translate(20 30)">
+    <rect width="140" height="140" rx="32" fill="#0A0612"/>
+    <path d="M 50 32 A 38 38 0 1 0 50 108" fill="none" stroke="url(#w3)" stroke-width="11" stroke-linecap="round"/>
+    <path d="M 62 42 A 30 30 0 1 0 62 98" fill="none" stroke="url(#w2)" stroke-width="11" stroke-linecap="round"/>
+    <path d="M 76 52 A 22 22 0 1 0 76 88" fill="none" stroke="url(#w1)" stroke-width="11" stroke-linecap="round"/>
+    <rect x="100" y="36" width="6" height="10" rx="1" fill="#00FFD1"/>
+  </g>
+
+  <!-- wordmark -->
+  <g font-family="ui-monospace, 'JetBrains Mono', 'Fira Code', monospace" font-weight="700">
+    <text x="190" y="92" font-size="42" fill="#FFFFFF" letter-spacing="2">CLAUDE CODE</text>
+    <text x="190" y="142" font-size="42" fill="url(#w1)" letter-spacing="8">CLUB</text>
+    <text x="404" y="142" font-size="14" fill="#9999AA" letter-spacing="3">// CCC</text>
+  </g>
+</svg>

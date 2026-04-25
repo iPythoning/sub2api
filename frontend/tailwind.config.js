@@ -5,47 +5,73 @@ export default {
   theme: {
     extend: {
       colors: {
-        // 主色调 - Teal/Cyan 青色系
+        // CC Club 主色 - 霓虹紫
         primary: {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf',
-          500: '#14b8a6',
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#115e59',
-          900: '#134e4a',
-          950: '#042f2e'
+          50: '#F4EBFF',
+          100: '#E5D4FF',
+          200: '#CFA8FF',
+          300: '#BC85FF',
+          400: '#B266FF',
+          500: '#B847FF',
+          600: '#9B2BE5',
+          700: '#7C1FCC',
+          800: '#5C16A6',
+          900: '#3F0F73',
+          950: '#2D1B4E'
         },
-        // 辅助色 - 深蓝灰
+        // 辅助色 - 深蓝紫灰（暗黑赛博背景体系）
         accent: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-          950: '#020617'
+          50: '#F2EEFF',
+          100: '#E0D8F5',
+          200: '#C0B5DC',
+          300: '#9D93B8',
+          400: '#7E7396',
+          500: '#665E80',
+          600: '#4D4663',
+          700: '#3A344D',
+          800: '#262238',
+          900: '#14101F',
+          950: '#0A0612'
         },
-        // 深色模式背景
+        // 暗黑赛博 ink 色板（背景层）
+        ink: {
+          50: '#F2EEFF',
+          100: '#E0D8F5',
+          200: '#C0B5DC',
+          300: '#9D93B8',
+          400: '#7E7396',
+          500: '#665E80',
+          600: '#4D4663',
+          700: '#3A344D',
+          800: '#1F1830',
+          900: '#14101F',
+          950: '#0A0612'
+        },
+        // Claude 同源橘红（次 CTA / Premium 徽章）
+        warm: {
+          400: '#E89377',
+          500: '#D97757',
+          600: '#B85F44'
+        },
+        // 终端霓虹青（代码高亮 / 成功状态）
+        cool: {
+          400: '#33FFD9',
+          500: '#00FFD1',
+          600: '#00CCAA'
+        },
+        // dark 别名保留兼容现有代码
         dark: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-          950: '#020617'
+          50: '#F2EEFF',
+          100: '#E0D8F5',
+          200: '#C0B5DC',
+          300: '#9D93B8',
+          400: '#7E7396',
+          500: '#665E80',
+          600: '#4D4663',
+          700: '#3A344D',
+          800: '#1F1830',
+          900: '#14101F',
+          950: '#0A0612'
         }
       },
       fontFamily: {
@@ -65,22 +91,24 @@ export default {
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
       },
       boxShadow: {
-        glass: '0 8px 32px rgba(0, 0, 0, 0.08)',
-        'glass-sm': '0 4px 16px rgba(0, 0, 0, 0.06)',
-        glow: '0 0 20px rgba(20, 184, 166, 0.25)',
-        'glow-lg': '0 0 40px rgba(20, 184, 166, 0.35)',
-        card: '0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06)',
-        'card-hover': '0 10px 40px rgba(0, 0, 0, 0.08)',
-        'inner-glow': 'inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+        glass: '0 8px 32px rgba(184, 71, 255, 0.10)',
+        'glass-sm': '0 4px 16px rgba(184, 71, 255, 0.08)',
+        glow: '0 0 20px rgba(184, 71, 255, 0.35)',
+        'glow-lg': '0 0 40px rgba(184, 71, 255, 0.50)',
+        'glow-warm': '0 0 24px rgba(217, 119, 87, 0.40)',
+        'glow-cool': '0 0 24px rgba(0, 255, 209, 0.35)',
+        card: '0 1px 3px rgba(0, 0, 0, 0.30), 0 1px 2px rgba(0, 0, 0, 0.40)',
+        'card-hover': '0 10px 40px rgba(184, 71, 255, 0.20)',
+        'inner-glow': 'inset 0 1px 0 rgba(184, 71, 255, 0.20)'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-primary': 'linear-gradient(135deg, #14b8a6 0%, #0d9488 100%)',
-        'gradient-dark': 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
+        'gradient-primary': 'linear-gradient(135deg, #D97757 0%, #B847FF 100%)',
+        'gradient-dark': 'linear-gradient(135deg, #1F1830 0%, #0A0612 100%)',
         'gradient-glass':
-          'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
+          'linear-gradient(135deg, rgba(184,71,255,0.10) 0%, rgba(184,71,255,0.04) 100%)',
         'mesh-gradient':
-          'radial-gradient(at 40% 20%, rgba(20, 184, 166, 0.12) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(6, 182, 212, 0.08) 0px, transparent 50%), radial-gradient(at 0% 50%, rgba(20, 184, 166, 0.08) 0px, transparent 50%)'
+          'radial-gradient(at 40% 20%, rgba(184, 71, 255, 0.18) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(217, 119, 87, 0.12) 0px, transparent 50%), radial-gradient(at 0% 50%, rgba(0, 255, 209, 0.08) 0px, transparent 50%)'
       },
       animation: {
         'fade-in': 'fadeIn 0.3s ease-out',
@@ -118,8 +146,8 @@ export default {
           '100%': { backgroundPosition: '200% 0' }
         },
         glow: {
-          '0%': { boxShadow: '0 0 20px rgba(20, 184, 166, 0.25)' },
-          '100%': { boxShadow: '0 0 30px rgba(20, 184, 166, 0.4)' }
+          '0%': { boxShadow: '0 0 20px rgba(184, 71, 255, 0.35)' },
+          '100%': { boxShadow: '0 0 30px rgba(184, 71, 255, 0.55)' }
         }
       },
       backdropBlur: {

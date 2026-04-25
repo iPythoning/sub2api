@@ -1,5 +1,5 @@
 /**
- * Core Type Definitions for Sub2API Frontend
+ * Core Type Definitions for Claude Code Club Frontend
  */
 
 // ==================== Common Types ====================

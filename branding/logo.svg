@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1A0F2E"/>
+      <stop offset="60%" stop-color="#0A0612"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <linearGradient id="cMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97757"/>
+      <stop offset="100%" stop-color="#B847FF"/>
+    </linearGradient>
+    <linearGradient id="cMid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B847FF"/>
+      <stop offset="100%" stop-color="#7C2DFF"/>
+    </linearGradient>
+    <linearGradient id="cBack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A1B7F"/>
+      <stop offset="100%" stop-color="#2D1B4E"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <!-- background ring -->
+  <circle cx="256" cy="256" r="248" fill="url(#bgGlow)"/>
+  <circle cx="256" cy="256" r="246" fill="none" stroke="#B847FF" stroke-width="2" opacity="0.35"/>
+  <circle cx="256" cy="256" r="232" fill="none" stroke="#B847FF" stroke-width="1" opacity="0.18" stroke-dasharray="3 6"/>
+
+  <!-- soft outer glow -->
+  <circle cx="256" cy="256" r="220" fill="#B847FF" opacity="0.10" filter="url(#glowSoft)"/>
+
+  <!-- back C (deepest, leftmost) -->
+  <g filter="url(#glow)" opacity="0.85">
+    <path d="M 200 130
+             A 130 130 0 1 0 200 382"
+          fill="none" stroke="url(#cBack)" stroke-width="34" stroke-linecap="round"/>
+  </g>
+
+  <!-- mid C -->
+  <g filter="url(#glow)" opacity="0.95">
+    <path d="M 240 158
+             A 110 110 0 1 0 240 354"
+          fill="none" stroke="url(#cMid)" stroke-width="32" stroke-linecap="round"/>
+  </g>
+
+  <!-- front C (most prominent) -->
+  <g filter="url(#glow)">
+    <path d="M 286 188
+             A 92 92 0 1 0 286 324"
+          fill="none" stroke="url(#cMain)" stroke-width="30" stroke-linecap="round"/>
+  </g>
+
+  <!-- terminal cursor accent (top-right) -->
+  <g transform="translate(360 132)">
+    <rect x="-6" y="-2" width="14" height="22" rx="2" fill="#00FFD1" opacity="0.9"/>
+    <rect x="-6" y="-2" width="14" height="22" rx="2" fill="#00FFD1" opacity="0.4" filter="url(#glowSoft)"/>
+  </g>
+
+  <!-- corner ticks -->
+  <g stroke="#B847FF" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M 90 256 L 70 256"/>
+    <path d="M 422 256 L 442 256"/>
+    <path d="M 256 90 L 256 70"/>
+    <path d="M 256 422 L 256 442"/>
+  </g>
+</svg>
